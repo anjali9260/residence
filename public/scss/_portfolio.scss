@@ -1,0 +1,249 @@
+.portfolio {
+    width: 100%;
+    padding: 6rem 0;
+    &-wrapper {
+        @extend .container;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 2rem;
+        input {
+            font-size: 1.4rem;
+        }
+        h1 {
+            font-size: 4rem;
+            color: $h1;
+            font-weight: 500;
+        }
+        .para {
+            max-width: 50%;
+            font-size: 1.5rem;
+            color: $content;
+            font-weight: 500;
+            line-height: 25px;
+            text-align: center;
+        }
+        .btns {
+            display: flex;
+            gap: 3rem;
+            .btn {
+                font-size: 1.4rem;
+                color: $h1;
+                padding: 0.2rem 1.6rem;
+                background-color: $btn;
+                font-weight: 500;
+                border-radius: 3px;
+                &:hover {
+                    background-color: $primary;
+                    color: #fff;
+                }
+                &-active {
+                    background-color: $primary;
+                    color: #fff;
+                }
+            }
+        }
+        .card-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(28rem, 1fr));
+            grid-gap: 3rem;
+            width: 100%;
+            margin-top: 1.5rem;
+            padding: 0 6rem;
+
+            .card {
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
+                    rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+                border-radius: 3px;
+                display: none;
+                &-active {
+                    display: block;
+                }
+
+                &:hover {
+                    .img-wrapper {
+                        img {
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+
+                .img-wrapper {
+                    height: 22rem;
+                    overflow: hidden;
+                    position: relative;
+                    &::after {
+                        position: absolute;
+                        content: "";
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgba(0, 0, 0, 0.189);
+                        z-index: 2;
+                    }
+                    .list {
+                        position: absolute;
+                        top: 2rem;
+                        padding: 0.1rem 1rem;
+                        z-index: 10;
+                        font-size: 1.3rem;
+                        border-radius: 3px;
+                        color: #fff;
+                        text-transform: capitalize;
+                    }
+                    #featured {
+                        background-color: $featured;
+                        left: 2rem;
+                    }
+                    #sales {
+                        background-color: $primary;
+                        right: 2rem;
+                    }
+                    #offer {
+                        background-color: $red;
+                        right: 8rem;
+                    }
+                    img {
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                        transition: transform 0.6s ease-in-out;
+                        z-index: 1;
+                    }
+                    .info {
+                        width: 100%;
+                        position: absolute;
+                        bottom: 1rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        color: #fff;
+                        padding: 0 2rem;
+                        z-index: 10;
+                        .locate {
+                            font-size: 1.4rem;
+                        }
+                        .address {
+                            span {
+                                margin-left: 0.7rem;
+                                text-transform: capitalize;
+                                font-size: 1.4rem;
+                                font-weight: 500;
+                            }
+                        }
+                        .right {
+                            display: flex;
+                            gap: 1rem;
+                            align-items: center;
+                            div {
+                                display: flex;
+                                gap: 0.5rem;
+                                align-items: center;
+
+                                span {
+                                    font-size: 1.4rem;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .detail {
+                    padding: 1.5rem;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: center;
+                    flex-direction: column;
+                    gap: 0.7rem;
+                    h2 {
+                        font-size: 2rem;
+                        color: $h1;
+                        font-weight: 500;
+                        text-align: left;
+                        &:hover {
+                            color: $primary;
+                        }
+                    }
+                    h3 {
+                        font-size: 1.5rem;
+                        color: $primary;
+                        font-weight: 500;
+                        text-align: left;
+                        span {
+                            font-size: 1.8rem;
+                        }
+                    }
+                    .para1 {
+                        font-size: 1.4rem;
+                        color: $content;
+                        font-weight: 400;
+                        line-height: 20px;
+                    }
+                    .size {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 1.8rem;
+                        margin: 1rem 0;
+                        div {
+                            display: flex;
+                            gap: 0.6rem;
+                            align-items: center;
+                        }
+                        .icon {
+                            font-size: 1.7rem;
+                            color: rgba(0, 0, 0, 0.489);
+                        }
+                        span {
+                            font-size: 1.4rem;
+                        }
+                    }
+                    .name {
+                        border-top: 1px solid $border;
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding-top: 1.5rem;
+                        .left {
+                            display: flex;
+                            align-items: center;
+                            gap: 1rem;
+
+                            .img-wrap {
+                                height: 3rem;
+                                width: 3rem;
+                                overflow: hidden;
+                                img {
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: contain;
+                                    border-radius: 50%;
+                                }
+                            }
+                            h4 {
+                                font-size: 1.4rem;
+                                color: $h1;
+                            }
+                        }
+
+                        .link {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 0.5rem;
+                            .item {
+                                font-size: 1.4rem;
+                                color: $content;
+                                border: 1px solid $border;
+                                padding: 0.7rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

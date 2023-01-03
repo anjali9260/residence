@@ -1,0 +1,264 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  color: inherit;
+  list-style: none;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.4;
+  overflow-x: hidden;
+}
+
+.container, .portfolio-wrapper {
+  width: 100%;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.portfolio {
+  width: 100%;
+  padding: 6rem 0;
+}
+.portfolio-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+.portfolio-wrapper input {
+  font-size: 1.4rem;
+}
+.portfolio-wrapper h1 {
+  font-size: 4rem;
+  color: #222222;
+  font-weight: 500;
+}
+.portfolio-wrapper .para {
+  max-width: 50%;
+  font-size: 1.5rem;
+  color: #8072a7;
+  font-weight: 500;
+  line-height: 25px;
+  text-align: center;
+}
+.portfolio-wrapper .btns {
+  display: flex;
+  gap: 3rem;
+}
+.portfolio-wrapper .btns .btn {
+  font-size: 1.4rem;
+  color: #222222;
+  padding: 0.2rem 1.6rem;
+  background-color: #f3f3f3;
+  font-weight: 500;
+  border-radius: 3px;
+}
+.portfolio-wrapper .btns .btn:hover {
+  background-color: #1d81e1;
+  color: #fff;
+}
+.portfolio-wrapper .btns .btn-active {
+  background-color: #1d81e1;
+  color: #fff;
+}
+.portfolio-wrapper .card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(28rem, 1fr));
+  grid-gap: 3rem;
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 0 6rem;
+}
+.portfolio-wrapper .card-wrapper .card {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  border-radius: 3px;
+  display: none;
+}
+.portfolio-wrapper .card-wrapper .card-active {
+  display: block;
+}
+.portfolio-wrapper .card-wrapper .card:hover .img-wrapper img {
+  transform: scale(1.1);
+}
+.portfolio-wrapper .card-wrapper .card .img-wrapper {
+  height: 22rem;
+  overflow: hidden;
+  position: relative;
+}
+.portfolio-wrapper .card-wrapper .card .img-wrapper::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.189);
+  z-index: 2;
+}
+.portfolio-wrapper .card-wrapper .card .img-wrapper .list {
+  position: absolute;
+  top: 2rem;
+  padding: 0.1rem 1rem;
+  z-index: 10;
+  font-size: 1.3rem;
+  border-radius: 3px;
+  color: #fff;
+  text-transform: capitalize;
+}
+.portfolio-wrapper .card-wrapper .card .img-wrapper #featured {
+  background-color: #eec58c;
+  left: 2rem;
+}
+.portfolio-wrapper .card-wrapper .card .img-wrapper #sales {
+  background-color: #1d81e1;
+  right: 2rem;
+}
+.portfolio-wrapper .card-wrapper .card .img-wrapper #offer {
+  background-color: #dd3333;
+  right: 8rem;
+}
+.portfolio-wrapper .card-wrapper .card .img-wrapper img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.6s ease-in-out;
+  z-index: 1;
+}
+.portfolio-wrapper .card-wrapper .card .img-wrapper .info {
+  width: 100%;
+  position: absolute;
+  bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  padding: 0 2rem;
+  z-index: 10;
+}
+.portfolio-wrapper .card-wrapper .card .img-wrapper .info .locate {
+  font-size: 1.4rem;
+}
+.portfolio-wrapper .card-wrapper .card .img-wrapper .info .address span {
+  margin-left: 0.7rem;
+  text-transform: capitalize;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.portfolio-wrapper .card-wrapper .card .img-wrapper .info .right {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.portfolio-wrapper .card-wrapper .card .img-wrapper .info .right div {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.portfolio-wrapper .card-wrapper .card .img-wrapper .info .right div span {
+  font-size: 1.4rem;
+}
+.portfolio-wrapper .card-wrapper .card .detail {
+  padding: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.portfolio-wrapper .card-wrapper .card .detail h2 {
+  font-size: 2rem;
+  color: #222222;
+  font-weight: 500;
+  text-align: left;
+}
+.portfolio-wrapper .card-wrapper .card .detail h2:hover {
+  color: #1d81e1;
+}
+.portfolio-wrapper .card-wrapper .card .detail h3 {
+  font-size: 1.5rem;
+  color: #1d81e1;
+  font-weight: 500;
+  text-align: left;
+}
+.portfolio-wrapper .card-wrapper .card .detail h3 span {
+  font-size: 1.8rem;
+}
+.portfolio-wrapper .card-wrapper .card .detail .para1 {
+  font-size: 1.4rem;
+  color: #8072a7;
+  font-weight: 400;
+  line-height: 20px;
+}
+.portfolio-wrapper .card-wrapper .card .detail .size {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.8rem;
+  margin: 1rem 0;
+}
+.portfolio-wrapper .card-wrapper .card .detail .size div {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+.portfolio-wrapper .card-wrapper .card .detail .size .icon {
+  font-size: 1.7rem;
+  color: rgba(0, 0, 0, 0.489);
+}
+.portfolio-wrapper .card-wrapper .card .detail .size span {
+  font-size: 1.4rem;
+}
+.portfolio-wrapper .card-wrapper .card .detail .name {
+  border-top: 1px solid rgba(128, 114, 167, 0.1333333333);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.5rem;
+}
+.portfolio-wrapper .card-wrapper .card .detail .name .left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.portfolio-wrapper .card-wrapper .card .detail .name .left .img-wrap {
+  height: 3rem;
+  width: 3rem;
+  overflow: hidden;
+}
+.portfolio-wrapper .card-wrapper .card .detail .name .left .img-wrap img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 50%;
+}
+.portfolio-wrapper .card-wrapper .card .detail .name .left h4 {
+  font-size: 1.4rem;
+  color: #222222;
+}
+.portfolio-wrapper .card-wrapper .card .detail .name .link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.portfolio-wrapper .card-wrapper .card .detail .name .link .item {
+  font-size: 1.4rem;
+  color: #8072a7;
+  border: 1px solid rgba(128, 114, 167, 0.1333333333);
+  padding: 0.7rem;
+}/*# sourceMappingURL=main.css.map */
